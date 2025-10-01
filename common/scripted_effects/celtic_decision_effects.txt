@@ -1,4 +1,4 @@
-restore_albion_decision_scripted_effect = {
+﻿restore_albion_decision_scripted_effect = {
 	every_sub_realm_county = {
 		limit = {
 			NOR = {

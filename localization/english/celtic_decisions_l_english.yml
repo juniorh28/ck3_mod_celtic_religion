@@ -9,3 +9,10 @@
  celtic_albion.0002.desc:0 "The [ROOT.Char.Custom2('RelationDescriptor', SCOPE.sC('reclaimer'))] [reclaimer.GetName] has officially announced the rebirth of a Celtic rule. \n\nAfter centuries of foreign rule, the Isles have returned under the control of their original owners."
  celtic_albion.0002.a:0 "A [reclaimer.GetCulture.GetNameNoTooltip] scourge upon the lands..."
  celtic_albion.0002.b:0 "Albion is ours once again!"
+
+ # Decision: Reclaim Albion
+ reclaim_albion_decision:0 "Reclaim Albion"
+ reclaim_albion_decision_desc:0 "If all of the Celtic peoples unite, there is no one who can stop us. I will bring about the reclaimation of Albion for our people!"
+ reclaim_albion_decision_tooltip:0 "Reclaim Albion for the [ROOT.Char.GetCulture.GetNameNoTooltip|U] people, gaining control of all counties in the geographical region of Albion."
+ reclaim_albion_decision_confirm:0 "Reclaim Albion"
+ 

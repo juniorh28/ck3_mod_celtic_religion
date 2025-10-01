@@ -1,0 +1,121 @@
+###########################################
+# #Reclaim Albion for the Celts			  #
+###########################################
+reclaim_albion_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = major
+	
+	ai_check_interval = 120
+	
+	desc = reclaim_albion_decision_desc
+	
+	is_shown = {
+		religion = religion:celtic_religion
+		OR = {
+			culture = { has_cultural_pillar = heritage_goidelic }
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+		# is_landed_or_landless_administrative = yes
+		# any_sub_realm_county = {
+		# 	title_province = {
+		# 		geographical_region = albion
+		# 	}
+		# 	NOR = {
+		# 		culture = { has_cultural_pillar = heritage_goidelic }
+		# 		culture = { has_cultural_pillar = heritage_brythonic }
+		# 	}
+		# }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:reclaim_albion_decision
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls_region = albion
+		OR = {
+			culture = { has_cultural_pillar = heritage_goidelic }
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+
+		# You can have no more than 1 powerful vassal with the "wrong" culture
+		# custom_description = {
+		# 	text = reclaim_albion_custom_decision
+		# 	trigger_if = {
+		# 		limit = {
+		# 			any_vassal = {
+		# 				is_powerful_vassal = yes
+		# 				NOR = {
+		# 					culture = {
+		# 						has_cultural_pillar = heritage_goidelic
+		# 					}
+		# 					culture = {
+		# 						has_cultural_pillar = heritage_brythonic
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 		any_vassal = {
+		# 			count <= 1
+		# 			is_powerful_vassal = yes
+		# 			NOR = {
+		# 				culture = {
+		# 					has_cultural_pillar = heritage_goidelic
+		# 				}
+		# 				culture = {
+		# 					has_cultural_pillar = heritage_brythonic
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+		completely_controls_region = albion
+		is_landed = yes
+	}
+
+	effect = {
+		# gain_heroic_legend_seed_tooltip_effect = yes
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:reclaim_albion_decision
+		}
+		show_as_tooltip = {
+			restore_albion_decision_scripted_effect = yes
+		}
+		trigger_event = celtic_albion.0001
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+				OR = {
+					culture = { has_cultural_pillar = heritage_west_germanic }
+					culture = { has_cultural_pillar = heritage_goidelic }
+					culture = { has_cultural_pillar = heritage_brythonic }
+					has_culture = culture:norman
+				}
+			}
+			trigger_event = celtic_albion.0002
+		}
+
+	}
+	cost = {
+		gold = 300
+	}
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+}

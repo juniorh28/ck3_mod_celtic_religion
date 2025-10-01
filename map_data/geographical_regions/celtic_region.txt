@@ -36,6 +36,11 @@ albion = {
 	}
 }
 
+frisia = {
+	# Frisia
+	d_holland d_gelre d_utrecht d_frisia d_flanders
+}
+
 ##############################
 # Misc
 ###############################

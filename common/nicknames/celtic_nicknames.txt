@@ -1,0 +1,3 @@
+﻿# Fame
+nick_boudica_avenger = {}
+nick_avenger_boudica = {}
