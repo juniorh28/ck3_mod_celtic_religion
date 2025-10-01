@@ -1,0 +1,18 @@
+```
+Music Used
+```
+
+Vetur Frosti by Alexander Nakarada (CreatorChords) | https://creatorchords.com
+Music promoted by https://www.free-stock-music.com
+Creative Commons / Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+We Three Celtic Kings by Alexander Nakarada (CreatorChords) | https://creatorchords.com
+Music promoted by https://www.free-stock-music.com
+Creative Commons / Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+Celtic Atmosphere by Alexander Nakarada (CreatorChords) | https://creatorchords.com
+Music promoted by https://www.free-stock-music.com
+Creative Commons / Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/

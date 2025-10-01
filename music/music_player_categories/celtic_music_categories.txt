@@ -1,0 +1,11 @@
+
+## CELTIC MUSIC
+category = {
+	id = "celtic_religion_mod_music"
+	name = "celtic_music_list"
+	tracks = {
+		custom_music1
+		custom_music2
+		custom_music3
+	}
+}
