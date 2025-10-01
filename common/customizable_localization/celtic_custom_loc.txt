@@ -1,0 +1,8 @@
+GetCelticMaa = {	
+	type = character
+
+	text = {
+		localization_key = war_dog
+		trigger = {	scope:maa_type_2 = flag:war_dog }
+	}
+}

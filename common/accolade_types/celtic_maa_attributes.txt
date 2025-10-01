@@ -1,0 +1,169 @@
+@wolfhound_attr_wolf_maint_1 = -0.2
+@wolfhound_attr_wolf_maint_2 = -0.35
+@wolfhound_attr_wolf_maint_3 = -0.5
+
+@wolfhound_attr_wolf_max_size_1 = 1
+@wolfhound_attr_wolf_max_size_2 = 2
+@wolfhound_attr_wolf_max_size_3 = 3
+
+@wolfhound_attr_wolf_damage_2 = 0.2
+@wolfhound_attr_wolf_damage_3 = 0.2
+
+@wolfhound_attr_wolf_tough_3 = 0.2
+
+# Wolfhound
+wolfhound_attribute = {
+	adjective = accolade_wolfhounds
+	noun = accolade_wolfhounds
+	accolade_categories = { men_at_arms army_bonus militant forceful leader aggressive defensive }
+
+	potential = {
+		prowess >= accolade_prowess_requirement_value
+		OR = {
+			has_trait = unyielding_defender
+			has_trait = aggressive_attacker
+		}
+		culture ?= { has_innovation = innovation_wolfhounds }
+	}
+
+	weight = {
+		value = accolade_uninteresting_base_value
+		scope:owner ?= {
+			# Should only be interested at all if they have a unit of the type OR if the maa type is exciting and foreign
+			if = {
+				limit = {
+					OR = {
+						number_maa_regiments_of_base_type = {
+							type = war_dog
+							value >= 1
+						}
+						culture ?= {
+							NOR = {
+								has_innovation = innovation_wolfhounds
+							}
+						}
+					}
+				}
+				add = @has_relevant_maa_weight_up_value
+				# Weight up a bit further for more MaA of the same type.
+				## A few.
+				if = {
+					limit = {
+						number_maa_regiments_of_base_type = {
+							type = war_dog
+							value >= @number_maa_regiments_increment_1
+						}
+					}
+					add = @has_relevant_maa_weight_up_value
+				}
+				## Lots.
+				if = {
+					limit = {
+						number_maa_regiments_of_base_type = {
+							type = war_dog
+							value >= @number_maa_regiments_increment_2
+						}
+					}
+					add = @has_relevant_maa_weight_up_value
+				}
+				## Many.
+				if = {
+					limit = {
+						number_maa_regiments_of_base_type = {
+							type = war_dog
+							value >= @number_maa_regiments_increment_3
+						}
+					}
+					add = @has_relevant_maa_weight_up_value
+				}
+				## Many-lots.
+				if = {
+					limit = {
+						number_maa_regiments_of_base_type = {
+							type = war_dog
+							value >= @number_maa_regiments_increment_4
+						}
+					}
+					add = @has_relevant_maa_weight_up_value
+				}
+				# AI values.
+				add = {
+					value = ai_boldness
+					multiply = 1
+				}
+				add = {
+					value = ai_honor
+					multiply = 1
+				}
+				#Culture
+				if = {
+					limit = {
+						root.culture ?= {
+							OR = {
+								has_cultural_pillar = heritage_goidelic
+								has_cultural_pillar = heritage_brythonic
+							}
+						}
+					}
+					add = @respected_culture_for_maa_type_value
+				}
+				# Wolfhounds are cool
+				add = 100
+				# Finally, weight for opinion.
+				multiply = accolade_opinion_multiplier_value
+			}
+		}
+	}
+
+	ranks = {
+		# lights are incredibly deadly but also really expensive. So what if. *What if*. We reduced the cost to run them as we started to buff them? Scream, cry, seethe, cope, etc.
+		100 = {
+			liege_modifier = {
+				wolfhound_maintenance_mult = @wolfhound_attr_wolf_maint_1
+				wolfhound_max_size_add = @wolfhound_attr_wolf_max_size_1
+			}
+		}
+		300 = {
+			liege_modifier = {
+				wolfhound_maintenance_mult = @wolfhound_attr_wolf_maint_1
+				wolfhound_max_size_add = @wolfhound_attr_wolf_max_size_1
+			}
+		}
+		600 = {
+			liege_modifier = {
+				wolfhound_maintenance_mult = @wolfhound_attr_wolf_maint_2
+				wolfhound_max_size_add = @wolfhound_attr_wolf_max_size_2
+			}
+			knight_army_modifier = { wolfhound_damage_mult = @wolfhound_attr_wolf_damage_2 }
+			men_at_arms = { accolade_maa_wolfhounds }
+		}
+		1000 = {
+			liege_modifier = {
+				wolfhound_maintenance_mult = @wolfhound_attr_wolf_maint_2
+				wolfhound_max_size_add = @wolfhound_attr_wolf_max_size_2
+			}
+			knight_army_modifier = { wolfhound_damage_mult = @wolfhound_attr_wolf_damage_2 }
+		}
+		1500 = {
+			liege_modifier = {
+				wolfhound_maintenance_mult = @wolfhound_attr_wolf_maint_3
+				wolfhound_max_size_add = @wolfhound_attr_wolf_max_size_3
+			}
+			knight_army_modifier = {
+				wolfhound_damage_mult = @wolfhound_attr_wolf_damage_3
+				wolfhound_toughness_mult = @wolfhound_attr_wolf_tough_3
+			}
+			men_at_arms = { accolade_maa_wolfhounds }
+		}
+		2100 = {
+			liege_modifier = {
+				wolfhound_maintenance_mult = @wolfhound_attr_wolf_maint_3
+				wolfhound_max_size_add = @wolfhound_attr_wolf_max_size_3
+			}
+			knight_army_modifier = {
+				wolfhound_damage_mult = @wolfhound_attr_wolf_damage_3
+				wolfhound_toughness_mult = @wolfhound_attr_wolf_tough_3
+			}
+		}
+	}
+}

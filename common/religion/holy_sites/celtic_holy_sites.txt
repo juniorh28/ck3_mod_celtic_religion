@@ -1,0 +1,58 @@
+#############
+# Celtic
+#############
+
+tara = { # site of the hills of Tara where the high king of Ireland would be crowned
+	county = c_dublin
+	barony = b_trim
+
+	character_modifier = {
+		name = holy_site_tara_effect_name
+		diplomacy = 2
+		monthly_prestige_gain_mult = 0.1
+		hills_development_growth_factor = 0.25
+	}
+}
+
+stonehenge = { # Stonehhenge was a site of celebration for celtic druid society
+	county = c_wiltshire
+	barony = b_salisbury
+
+	character_modifier = {
+		name = holy_site_stonehenge_effect_name
+		learning = 2
+		monthly_piety_gain_mult = 0.1
+		same_faith_opinion = 15
+	}
+}
+
+orkney = {
+	county = c_orkney
+	barony = b_kirkwall
+
+	character_modifier = {
+		name = holy_site_orkney_effect_name
+		martial = 1
+		stewardship = 1
+	}
+}
+
+vannes = {
+	county = c_vannes
+	barony = b_vannes
+	
+	character_modifier = {
+		name = holy_site_vannes_effect_name
+		stewardship = 2
+	}
+}
+
+roquepertuse = { # Roquepertuse is an ancient Celtic religious center
+	county = c_provence
+	barony = b_marseille
+
+	character_modifier = {
+		name = holy_site_roquepertuse_effect_name
+		martial = 2
+	}
+}

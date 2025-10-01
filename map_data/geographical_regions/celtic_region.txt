@@ -1,0 +1,48 @@
+ireland_britian_region = {
+	duchies = {
+		# Breton
+		d_bedford d_northumberland d_lancaster d_york d_norfolk d_hereford d_canterbury
+		# Cymrw/Wales
+		d_gwynedd d_powys d_deheubarth
+		# Caledonia/Pictland
+		d_albany d_the_isles d_galloway d_western_isles d_lothian d_moray d_northern_isles
+		#Ireland
+		d_meath d_ulster d_connacht d_leinster d_munster
+		#Dumnonia
+		d_cornwall d_somerset d_gloucester
+		# Brittany
+		d_brittany
+	}
+}
+
+#Dumnonia is Cornwall, Devon and Somerset.
+cornish_region = {
+	duchies = {
+		d_cornwall d_gloucester d_somerset
+	}
+}
+
+#The whole of the British Isles minus Ireland.
+albion = {
+	duchies = {
+		# England/Breton
+		d_bedford d_northumberland d_lancaster d_york d_norfolk d_hereford d_canterbury
+		# Wales/Cymru
+		d_gwynedd d_powys d_deheubarth
+		# Scotland/Pictland
+		d_albany d_the_isles d_galloway d_western_isles d_lothian d_moray d_northern_isles
+		# Cornwall/Dumnonia
+		d_cornwall d_gloucester d_somerset
+	}
+}
+
+##############################
+# Misc
+###############################
+
+world_innovation_wolfhound = {
+	generate_modifiers = yes
+	regions = {
+		ireland_britian_region
+	}
+}

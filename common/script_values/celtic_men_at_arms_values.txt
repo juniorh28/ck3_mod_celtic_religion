@@ -1,0 +1,30 @@
+#########
+# Costs #
+#########
+
+@high_maint_mult = 3
+
+### Base Cost Values
+@wolfhound_recruitment_cost = 40
+@wolfhound_low_maint_cost = 0.15
+@wolfhound_high_maint_cost = @[wolfhound_low_maint_cost * high_maint_mult]
+
+celtic_wolfhound_recruitment_cost = @[wolfhound_recruitment_cost + 0]
+celtic_wolfhound_low_maint_cost = @[wolfhound_low_maint_cost * 0.8]
+celtic_wolfhound_high_maint_cost = @[wolfhound_high_maint_cost * 0.8]
+
+accolade_celtic_wolfhound_recruitment_cost = @[wolfhound_recruitment_cost * 2]
+
+culture_ai_weight_wolfhounds = {
+	value = 0
+	
+	if = { # Cultures that favours wolfhounds
+		limit = {
+			OR = {
+				# culture = { has_cultural_pillar = heritage_brythonic }
+				culture = { has_cultural_pillar = heritage_goidelic }
+			}
+		}
+		add = 60
+	}
+}

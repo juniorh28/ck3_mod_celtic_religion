@@ -1,0 +1,13 @@
+﻿l_english:
+
+ #Holy Sites: Celtic
+ holy_site_tara_name:0 "Tara"
+ holy_site_tara_effect_name:0 "From [holy_site|E] #weak ($holy_site_tara_name$)#!"
+ holy_site_stonehenge_name:0 "Stonehenge"
+ holy_site_stonehenge_effect_name:0 "From [holy_site|E] #weak ($holy_site_stonehenge_name$)#!"
+ holy_site_orkney_name:0 "Orkney"
+ holy_site_orkney_effect_name:0 "From [holy_site|E] #weak ($holy_site_orkney_name$)#!"
+ holy_site_roquepertuse_name:0 "Roquepertuse"
+ holy_site_roquepertuse_effect_name:0 "From [holy_site|E] #weak ($holy_site_roquepertuse_name$)#!"
+ holy_site_vannes_name:0 "Vannes"
+ holy_site_vannes_effect_name:0 "From [holy_site|E] #weak ($holy_site_vannes_name$)#!"

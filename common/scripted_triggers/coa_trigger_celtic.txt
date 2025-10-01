@@ -1,0 +1,15 @@
+coa_albion_eire_trigger = {
+	OR = {
+		scope:culture = {
+			has_coa_gfx = irish_coa_gfx
+		}
+		AND = {
+			exists = scope:title
+			scope:title = {
+				any_this_title_or_de_jure_above = {
+					this = title:e_albion_eire
+				}
+			}
+		}
+	}
+}

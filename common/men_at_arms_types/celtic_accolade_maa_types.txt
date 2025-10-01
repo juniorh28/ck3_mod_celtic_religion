@@ -1,0 +1,73 @@
+# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 3.5
+@cultural_maa_extra_ai_score = 60 # Equivalent to having 6 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+# Must be synced between files with the values located at "# Provisions Costs #".
+@provisions_cost_infantry_cheap = 3
+@provisions_cost_infantry_moderate = 7
+@provisions_cost_infantry_expensive = 12
+@provisions_cost_infantry_bankrupting = 15
+
+@provisions_cost_cavalry_cheap = 7
+@provisions_cost_cavalry_moderate = 15
+@provisions_cost_cavalry_expensive = 21
+@provisions_cost_cavalry_bankrupting = 30
+
+@provisions_cost_special_cheap = 6
+@provisions_cost_special_moderate = 12
+@provisions_cost_special_expensive = 18
+@provisions_cost_special_bankrupting = 24
+
+accolade_maa_wolfhounds = {
+	type = war_dog
+	icon = war_dog
+
+	can_recruit = {
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:wolfhound_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 35
+	toughness = 10
+	pursuit = 35
+	screen = 5
+	
+	siege_value = 0.2
+	
+	terrain_bonus = {
+		plains = { damage = 50 pursuit = 50 }
+		wetlands = { damage = 20 pursuit = 50 toughness = -20 }
+		hills = { damage = 50 pursuit = 20 }
+		mountains = { damage = -100 pursuit = -30 }
+		desert_mountains = { damage = -100 pursuit = -30 }
+	}
+	counters = {
+		skirmishers = 2
+		heavy_infantry = 2
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -30 toughness = -5 }
+		harsh_winter = { damage = -60 toughness = -10 }
+	}
+
+	buy_cost = { gold = accolade_celtic_wolfhound_recruitment_cost }
+	low_maintenance_cost = { gold = celtic_wolfhound_low_maint_cost }
+	high_maintenance_cost = { gold = celtic_wolfhound_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_bankrupting
+	
+	max_sub_regiments = 4
+	
+	stack = 60
+	hired_stack_size = 40
+	ai_quality = {
+		value = culture_ai_weight_wolfhounds
+		add = 100
+	}
+}

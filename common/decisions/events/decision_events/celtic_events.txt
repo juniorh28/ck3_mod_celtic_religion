@@ -1,0 +1,64 @@
+################
+# Restore Albion event
+# by Ewan Cowhig Croft
+################
+
+#The kingdom revived.
+celtic_albion.0001 = {
+	type = character_event
+	title = celtic_albion.0001.t
+	desc = celtic_albion.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		restore_albion_decision_scripted_effect = yes
+	}
+
+	#Take the nickname.
+	option = {
+		name = celtic_albion.0001.a
+		give_nickname = nick_boudica_avenger
+		add_prestige = minor_prestige_gain
+	}
+	#No thanks on the nickname, more prestige instead please.
+	option = {
+		name = celtic_albion.0001.b
+		add_prestige = medium_prestige_gain
+	}
+}
+
+# Players informed
+celtic_albion.0002 = {
+	type = character_event
+	title = celtic_albion.0002.t
+	desc = celtic_albion.0002.desc
+	theme = realm
+	left_portrait = {
+		character = scope:reclaimer
+		animation = personality_honorable
+	}
+
+	option = { # Not celtic
+		name = celtic_albion.0002.a
+		trigger = {
+			NOR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+	}
+	option = { # Also celtic
+		name = celtic_albion.0002.b
+		trigger = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+	}
+}

@@ -1,0 +1,4 @@
+war_dog = {
+	texture = "gfx/interface/icons/regimenttypes/war_dog.dds"
+	parent = men_at_arms
+}

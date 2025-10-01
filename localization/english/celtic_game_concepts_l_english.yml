@@ -1,0 +1,4 @@
+﻿l_english:
+
+ game_concept_war_dog:0 "War Dogs"
+ game_concept_war_dog_desc:0 "$game_concept_war_dog$ are canines used in battle.\n\nWhile each kind of $game_concept_war_dog$ is unique, they are generally a strong [counter|E] to infantry units, and are in turn Countered by [spearmen|E].\n\n$game_concept_war_dog$ are also often strong in flat [terrain|E]."
