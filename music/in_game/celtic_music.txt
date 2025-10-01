@@ -1,0 +1,43 @@
+### CELTIC MUSIC ###
+
+custom_music1 = {
+	music = "file:/music/alexander-nakarada-celtic-atmosphere.mp3"
+	name = "custom_music1"
+	mood = yes
+	can_be_interrupted = yes
+
+	is_valid = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+	}
+}
+
+custom_music1 = {
+	music = "file:/music/alexander-nakarada-vetur-frosti.mp3"
+	name = "custom_music2"
+	mood = yes
+	can_be_interrupted = yes
+
+	is_valid = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+	}
+}
+
+custom_music1 = {
+	music = "file:/music/alexander-nakarada-we-three-celtic-kings.mp3"
+	name = "custom_music3"
+	mood = yes
+	can_be_interrupted = yes
+
+	is_valid = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+	}
+}
