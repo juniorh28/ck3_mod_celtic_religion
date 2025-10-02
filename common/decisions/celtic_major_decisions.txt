@@ -17,16 +17,6 @@ reclaim_albion_decision = {
 			culture = { has_cultural_pillar = heritage_goidelic }
 			culture = { has_cultural_pillar = heritage_brythonic }
 		}
-		# is_landed_or_landless_administrative = yes
-		# any_sub_realm_county = {
-		# 	title_province = {
-		# 		geographical_region = albion
-		# 	}
-		# 	NOR = {
-		# 		culture = { has_cultural_pillar = heritage_goidelic }
-		# 		culture = { has_cultural_pillar = heritage_brythonic }
-		# 	}
-		# }
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -41,38 +31,6 @@ reclaim_albion_decision = {
 			culture = { has_cultural_pillar = heritage_goidelic }
 			culture = { has_cultural_pillar = heritage_brythonic }
 		}
-
-		# You can have no more than 1 powerful vassal with the "wrong" culture
-		# custom_description = {
-		# 	text = reclaim_albion_custom_decision
-		# 	trigger_if = {
-		# 		limit = {
-		# 			any_vassal = {
-		# 				is_powerful_vassal = yes
-		# 				NOR = {
-		# 					culture = {
-		# 						has_cultural_pillar = heritage_goidelic
-		# 					}
-		# 					culture = {
-		# 						has_cultural_pillar = heritage_brythonic
-		# 					}
-		# 				}
-		# 			}
-		# 		}
-		# 		any_vassal = {
-		# 			count <= 1
-		# 			is_powerful_vassal = yes
-		# 			NOR = {
-		# 				culture = {
-		# 					has_cultural_pillar = heritage_goidelic
-		# 				}
-		# 				culture = {
-		# 					has_cultural_pillar = heritage_brythonic
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# }
 	}
 
 	is_valid_showing_failures_only = {
