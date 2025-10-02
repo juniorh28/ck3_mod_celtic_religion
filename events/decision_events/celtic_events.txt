@@ -1,4 +1,4 @@
-################
+﻿################
 # Restore Albion event
 # by Ewan Cowhig Croft
 ################
@@ -10,13 +10,17 @@ celtic_albion.0001 = {
 	desc = celtic_albion.0001.desc
 	theme = realm
 	left_portrait = {
-		character = scope:founder
+		character = scope:reclaimer
 		animation = personality_honorable
 	}
 
 	immediate = {
-		play_music_cue = "mx_cue_positive_effect"
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		save_scope_as = reclaimer
 		restore_albion_decision_scripted_effect = yes
+		# legend_seed_great_deed_region_effect = {
+		# 	REGION = geographical_region:world_europe_west_britannia
+		# }
 	}
 
 	#Take the nickname.
